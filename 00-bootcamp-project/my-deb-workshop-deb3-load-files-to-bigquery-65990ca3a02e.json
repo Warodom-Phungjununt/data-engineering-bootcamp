@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "my-deb-workshop",
+  "private_key_id": "65990ca3a02ee160b2e32b4224bad6cb8e4b33a7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDHXs5SCatoudK/\n3a1vN7391G5e4DuXicXzmgYwn4YWECmH1pNY8hSI9tyrkDMAIR0XEIdrzFms3GXj\nabSFl4cQMZaAp/kHH/f0x9dYqE377nlnlX7BcJpQLi8p15Cy5tu1G0y3uHtuIaa9\nb4IClw7MnIs9zU5fRs8DQ+HCbxRmpPMLfHdslEIaTVwHlLy4mT/dVuUsojaLMRhk\nzNxijDZWdRnTUJBRj3Jq+eQ6KsAtUMn4U+LqitN02D3UUK7CHnlV5pfCxOA9ibDe\nPNygfqEGuL/aY7OCuUQF65016p8kK8NFXgqxFccGAY2VF+99AyK6DjlkxfQ/3DXQ\n6whFUoW3AgMBAAECggEATmP0GuSrbY+XEpLOlUrlHM9woERpmgF1gH2AzpCCz90F\n/1+66v+wXFQ4WwrlSrk6b22z2Yptfh7gvwS6ksaMOC1PQIILVCZZP/ltrnHqy9Ku\nELECuHuWaU1nhPu57OYB4Fl+FkTm31xC6/xSscMEciZhR2kY1jSIw/9mXqV/b4Xc\n97tTmgqMHwM5CgYrL+jrqQY1Me0ePkV39up47qQv4SsL3motuFJyK9ROnNbt+k8D\nKfnJFXrYCKcXbJZeZwURr6rkxG1oqNIEfbtpneR6xY4XIJY/v6NTQ3t6U1rsC923\noNA/uNVE+LFEZZtzlMgtfR6aP3HJ8rJPcgmDJmd6UQKBgQDwvtEpQbAdOhSNqu86\nGzdKOPFBsQeueHU6kKj3oR5FWlWGdiMKZEhzmWFp267VnA7kkeFFmNqGTrJpVrrG\nWRnDvh5u+nUXs1RkzDRAJ3PWK2DLI5ht7kCLGIDkmjnBtOnSulkdbJyQCIWdJJ07\naB/ZuFCD/ncbrEAhIg9S492rpwKBgQDUANXaGlGbYBOwnDnYxFXPDoPOzmufo6DH\nB6bbq1Qn5lzAqosKkFelVwXKAigFMyHNd8OlROTEEkCiAtNeULayHk+DmLVN5RQM\nQgnjqopXW1AKiyhQ5s3NqGsqRY4rWVB6nnFQJVVjOCzp2Vh4zKkgEsDPO++/feo3\nEDKt4DxXcQKBgD1mvZwDJ/LcXF+hiDBOvrRMf6PcjfP+vw9309CMpFbV6lhICznc\nR+pL5V+FazsJ+XZsioMgsCNvMOvS9gIeuYaGF+cANBseXtjyiCUQquel2qMU6gyn\npoiTcFRdzXtNNBHN+2qYx/moYsOokf2T2gPCka6ImUJSlWyd7kCa42+jAoGADqaU\nIMNq2lL0aWMSeFFxIKL/Jt6K/3g+VyLHPC0F3tADnujqPOumsu1loAUwINPcxSc+\npQAy0v3z635Ifx8S0RJZKl32QZDQJty1dD9H2iucR25Adf7NQCYgacZuwb4lWqPy\nbrh1wyqRqAN2Irr6ARZqrqeUtOYNtopvBicV5HECgYAYq+p6pSv7oeeQUGTezDLV\nq6aizkxaZ9LFmOXEKwJUCBvBpgsuoVYOYWXXYr6VoiUGf/ytTgWQV/Q4b0qT959A\nU2wyQMd3IG2LCrLC3OsLVgnpj6mSKd1oa+Hl/jgbTUcdEzllnNdmA52H7LvKkD0y\nCFCB9ZavMGJM30uutXbh1A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "deb3-load-files-to-bigquery@my-deb-workshop.iam.gserviceaccount.com",
+  "client_id": "108522359970234010634",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/deb3-load-files-to-bigquery%40my-deb-workshop.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
