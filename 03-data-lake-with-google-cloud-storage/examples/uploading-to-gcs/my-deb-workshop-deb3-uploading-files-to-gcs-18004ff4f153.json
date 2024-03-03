@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "my-deb-workshop",
+  "private_key_id": "18004ff4f1533f42f6f05c4884b62d698423ce68",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfW8m8pdfGyhzn\njzia7imZG+U173q6HMClLqnk8gWQ58KdmRMzwNiJ3131AlnDeNpKf5zKzjYO6m6L\n9i5p2EP9EfTyY0tqSLe8Ht+nJNEjbVFh3nCrjuPCZtj2wAASpilDByLbizjrI0VU\nyob+rnmOGCx/VaSA++N45G5FaVqdrsw9qZA8Wwhnm6e4a3yyBzhPBnRVGPSvVOIZ\nAQ8csKjkv07kdeFHh44nq9/dfWoEbmonc/a7IOyi1aUr39nujpp/W5MwVVvqugOl\ncboIJRVoOHHl50CJBTjsj4zVNkBK2yNUn5RDCpryQT3suB70S+KM35M3mNYPQWY0\nKTBq7zLPAgMBAAECggEAAWRcKmW1UFaEzArgBTcrNsGDh0y/Ow/uXhktr6nQs4J+\nQq4S4eV3kHYv6tTE61YQl/5Ef+RoOdeSabFWpETmHOjEoSb8YchNyxCSo1+Xz9y2\nG8y04NW6sv2wNkCV2/msPmHPOc4qGYmA9Y7ErtYaM9ZI9EP77nq/2YNBKuda9v+3\nIU4ytBzkm9YvhVeIOCtcocnv3W53x4WeESCgH6EFkubFE95PLo5xk7FO8/vA2nDh\nW+Xegk2q2EA9wPJDOs6rad49xk6lNLPVjBc+/VYCFRk3qliNg2up0vXSA+uV1d2H\nD0XfATQhazQkjzspzuh9LUUbTAqabRTQw3SYru5AoQKBgQDxQkEATjVgkf6hVEu8\nvbf6OoeAmbJdnPD+Al1NOXUB4H84Tfy89qz71ry7iTKGS0LP78zBZ98DvfDaa8BC\nQD75jCgy5xUx80D1lyoPbTFe9nuGwjepvZnNeDFx4R9JjJxY0xL6/++EfYWZK6pX\nFAZKBDrBHTOVUSNYAewqr2aZWwKBgQDtAYpDRQiC4qA2maUJ9fb+H/pu+XN7FSLT\nU1m2B0ka8nxFZ4BsMySV/cj96ds33ffqPAls7gc/t8g8fu3l2AT5eYugSmFW8hXe\nd+pd6f7w8gmaEo6HNjUnymNX+3GCyYIuSYgbX8hhzpDkqLbGTJYMJkXA8sNA8Lv1\ng0iilOxSnQKBgAkJmVPAmkFG1soGVVv5o2WtQZwwpbzZ/zEUt5gH+fkbBsj+KuSN\nPQemEKXZytm7AgK2Ee6AzJrgR6B2/tm8fF9uv6bAf0vCuAE7K2kuhvXut8vhhKJI\nJvXKdde1Pi3MJaMyLPjYE4ncBeAqAZSHfIDTTbwkMuV6B5/pWoZy0Z4XAoGBAOQU\nsFcubxNuPtpsn/vm/cvvQFVdsDmJzJrsQpA/kKXjJ56vDVKTISlLMwrP68xmy3da\nUYPHyagTGBrH1+9yJM9kne8ixWwjytHuOtgoINUFSCJCq3EJxLvHNDVuX/2KKMKc\ntuQJGFCvtpammkZZW6jTiBs4RJkRUwDhV5xGjuqtAoGBAKm4/TCfpgExTiN7RdwB\n2URmUbkbcuC9DWDJG1xkWsXBOhLQuCU/pG79QinqbjwUdwveOpBWKBq9x3OhRJos\nc4p8v7vi1gSAkqvJiekzuB4OjxwHJHz60ZnNwsYvhSnNtGDprnUgnGD2rmiLK7CU\n+VRkCW1u5s7P0jHgug5LrCie\n-----END PRIVATE KEY-----\n",
+  "client_email": "deb3-uploading-files-to-gcs@my-deb-workshop.iam.gserviceaccount.com",
+  "client_id": "108057785822047335847",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/deb3-uploading-files-to-gcs%40my-deb-workshop.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
