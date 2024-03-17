@@ -28,26 +28,36 @@ def _extract_data(ds):
         with open(f"{DAGS_FOLDER}/{DATA}-{ds}.csv", "w") as f:
             writer = csv.writer(f)
             header = [
-                # "event_id",
-                # "session_id",
-                # "page_url",
-                # "created_at",
-                # "event_type",
-                # "user",
-                # "order",
-                # "product",
+                "order_id",
+                "created_at",
+                "order_cost",
+                "shipping_cost",
+                "order_total",
+                "tracking_id",
+                "shipping_service",
+                "estimated_delivery_at",
+                "delivered_at",
+                "status",
+                "user",
+                "promo",
+                "address",
             ]
             writer.writerow(header)
             for each in data:
                 data = [
-                    # each["event_id"],
-                    # each["session_id"],
-                    # each["page_url"],
-                    # each["created_at"],
-                    # each["event_type"],
-                    # each["user"],
-                    # each["order"],
-                    # each["product"]
+                    each["order_id"],
+                    each["created_at"],
+                    each["order_cost"],
+                    each["shipping_cost"],
+                    each["order_total"],
+                    each["tracking_id"],
+                    each["shipping_service"],
+                    each["estimated_delivery_at"],
+                    each["delivered_at"],
+                    each["status"],
+                    each["user"],
+                    each["promo"],
+                    each["address"]
                 ]
                 writer.writerow(data)
 
@@ -121,18 +131,24 @@ with DAG(
 ):
 
     # Extract data from Postgres, API, or SFTP
-    extract_data = EmptyOperator(
+    extract_data = PythonOperator(
         task_id="extract_data",
+        python_callable=_extract_data,
+        op_kwargs={"ds": "{{ ds }}"},
     )
 
     # Load data to GCS
-    load_data_to_gcs = EmptyOperator(
+    load_data_to_gcs = PythonOperator(
         task_id="load_data_to_gcs",
+        python_callable=_load_data_to_gcs,
+        op_kwargs={"ds": "{{ ds }}"},
     )
 
     # Load data from GCS to BigQuery
-    load_data_from_gcs_to_bigquery = EmptyOperator(
+    load_data_from_gcs_to_bigquery = PythonOperator(
         task_id="load_data_from_gcs_to_bigquery",
+        python_callable=_load_data_from_gcs_to_bigquery,
+        op_kwargs={"ds": "{{ ds }}"},
     )
 
     # Task dependencies

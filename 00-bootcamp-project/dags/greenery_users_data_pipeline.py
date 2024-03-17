@@ -4,7 +4,7 @@ import json
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.bash import BashOperator
-from airflow.operators.python import BranchPythonOperator, PythonOperator
+from airflow.operators.python import PythonOperator
 from airflow.utils import timezone
 
 import requests
@@ -16,31 +16,40 @@ BUSINESS_DOMAIN = "greenery"
 LOCATION = "asia-southeast1"
 PROJECT_ID = "my-deb-workshop"
 DAGS_FOLDER = "/opt/airflow/dags"
-DATA = "products"
+DATA = "users"
 
 
-def _extract_data():
-    url = f"http://34.87.139.82:8000/{DATA}/"
+def _extract_data(ds):
+    url = f"http://34.87.139.82:8000/{DATA}/?created_at={ds}"
     response = requests.get(url)
     data = response.json()
 
-    with open(f"{DAGS_FOLDER}/{DATA}.csv", "w") as f:
-        writer = csv.writer(f)
-        header = [
-            "product_id",
-            "name",
-            "price",
-            "inventory",
-        ]
-        writer.writerow(header)
-        for each in data:
-            data = [
-                each["product_id"],
-                each["name"],
-                each["price"],
-                each["inventory"],
+    if data:
+        with open(f"{DAGS_FOLDER}/{DATA}-{ds}.csv", "w") as f:
+            writer = csv.writer(f)
+            header = [
+                "user_id",
+                "first_name",
+                "last_name",
+                "email",
+                "phone_number",
+                "created_at",
+                "updated_at",
+                "address",
             ]
-            writer.writerow(data)
+            writer.writerow(header)
+            for each in data:
+                data = [
+                    each["user_id"],
+                    each["first_name"],
+                    each["last_name"],
+                    each["email"],
+                    each["phone_number"],
+                    each["created_at"],
+                    each["updated_at"],
+                    each["address"]
+                ]
+                writer.writerow(data)
 
 
 def _load_data_to_gcs(ds):
@@ -64,7 +73,7 @@ def _load_data_to_gcs(ds):
     blob.upload_from_filename(file_path)
 
 
-def _load_data_from_gcs_to_bigquery():
+def _load_data_from_gcs_to_bigquery(ds):
     keyfile_bigquery = "/opt/airflow/dags/my-deb-workshop-deb3-load-files-to-bigquery-65990ca3a02e.json"
     service_account_info_bigquery = json.load(open(keyfile_bigquery))
     credentials_bigquery = service_account.Credentials.from_service_account_info(
@@ -104,7 +113,7 @@ default_args = {
     "start_date": timezone.datetime(2021, 2, 9),
 }
 with DAG(
-    dag_id="greenery_products_data_pipeline",
+    dag_id="greenery_users_data_pipeline",
     default_args=default_args,
     schedule="@daily",
     catchup=False,

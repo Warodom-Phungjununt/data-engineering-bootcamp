@@ -121,18 +121,24 @@ with DAG(
 ):
 
     # Extract data from Postgres, API, or SFTP
-    extract_data = EmptyOperator(
+    extract_data = PythonOperator(
         task_id="extract_data",
+        python_callable=_extract_data,
+        op_kwargs={"ds": "{{ ds }}"},
     )
 
     # Load data to GCS
-    load_data_to_gcs = EmptyOperator(
+    load_data_to_gcs = PythonOperator(
         task_id="load_data_to_gcs",
+        python_callable=_load_data_to_gcs,
+        op_kwargs={"ds": "{{ ds }}"},
     )
 
     # Load data from GCS to BigQuery
-    load_data_from_gcs_to_bigquery = EmptyOperator(
+    load_data_from_gcs_to_bigquery = PythonOperator(
         task_id="load_data_from_gcs_to_bigquery",
+        python_callable=_load_data_from_gcs_to_bigquery,
+        op_kwargs={"ds": "{{ ds }}"},
     )
 
     # Task dependencies
